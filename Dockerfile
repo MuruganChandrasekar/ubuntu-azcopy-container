@@ -1,9 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends wget
-  && apt-get install -y --no-install-recommends \
-         ca-certificates \
+  && apt-get install -y --no-install-recommends wget ca-certificates
 
 RUN set -ex \
   && wget -O azcopy.tar.gz https://aka.ms/downloadazcopy-v10-linux \
